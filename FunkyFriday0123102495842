@@ -111,9 +111,9 @@ local fireSignal, rollChance do
 
         local sum = 0;
         for i = 1, #chances do
-            sum += chances[i].value
+            sum = chances[i].value
         end
-
+          
         if sum == 0 then
             -- forgot to change this before?
             -- fixed 6/5/21
@@ -238,11 +238,12 @@ local window = library:CreateWindow('Funky Friday Xender Hub') do
     local folder = window:AddFolder('Credits') do
         folder:AddLabel({ text = 'Groovy.#0043 - UI library' })
         folder:AddLabel({ text = 'Groovy.#0043 - Script' })
-        folder:AddLabel({ text = 'Groovy.#0043 - Contributor'})
+        folder:AddLabel({ text = 'ZE_999 - Contributor'})
+      
     end
 
-    window:AddLabel({ text = 'Version 1.4a' })
-    window:AddLabel({ text = 'Updated 8/20/21' })
+    window:AddLabel({ text = 'Version 0.3.5a' })
+    window:AddLabel({ text = 'Updated 9/20/21' })
     window:AddBind({ text = 'Menu toggle', key = Enum.KeyCode.Delete, callback = function() library:Close() end })
 end
 
